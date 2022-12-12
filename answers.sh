@@ -20,3 +20,27 @@ WHERE id='1';
 
 
 
+#creating table
+# 1 :
+CREATE TABLE "Graduates" (
+	"ID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER NOT NULL UNIQUE,
+	"Gender"	TEXT,
+	"Points"	INTEGER,
+	"Graduation"	TEXT,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+
+# 2 :
+INSERT INTO Graduates (Name, Age, Gender, Points)
+SELECT Name, Age, Gender, Points FROM students
+WHERE name="Layal"; 
+
+# 3 :
+UPDATE Graduates SET Graduation = '08/09/2018'
+WHERE name = 'Layal';
+
+# 4 :
+DELETE FROM students WHERE name="Layal" ;
