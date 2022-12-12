@@ -51,3 +51,20 @@ SELECT employees.Name , employees.Company , companies.Date FROM employees INNER 
 SELECT employees.name FROM employees INNER JOIN companies ON employees.Company=companies.Name WHERE companies.Date<2000;
 
 SELECT companies.Name FROM companies INNER JOIN employees ON employees.Company=companies.Name WHERE Role="Graphic Designer";
+
+# Count and Filter
+
+# 1 :
+SELECT * FROM students WHERE Points=(SELECT max(Points) FROM students);
+
+# 2 :
+SELECT avg(Points) FROM students;
+
+# 3 :
+SELECT count(ID) FROM students WHERE Points="500";
+
+# 4 :
+SELECT Name FROM students WHERE Name like '%s%';
+
+# 5 :
+SELECT * FROM students ORDER BY Points DESC
