@@ -25,3 +25,19 @@ Gender Text,
 Points Integer,
 Graduation Text
 );
+#creating table
+# 1.Copy Layal's data from students to graduates
+
+INSERT INTO Graduates (Name, Age, Gender, Points)
+SELECT Name, Age, Gender, Points FROM students
+WHERE ID=4; 
+# 2.Add the graduation date previously mentioned to Layal's record in graduates
+
+UPDATE Graduates 
+SET Graduation = '08/09/2018'
+WHERE ID='1';
+
+# 3.Remove Layal's record from students
+
+DELETE FROM students 
+WHERE id='4';
