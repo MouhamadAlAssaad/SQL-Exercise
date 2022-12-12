@@ -18,12 +18,5 @@ UPDATE students
 SET Points='150'
 WHERE id='1';
 
-CREATE TABLE "Graduates" (
-	"ID"	INTEGER NOT NULL,
-	"Name"	TEXT NOT NULL UNIQUE,
-	"Age"	INTEGER NOT NULL UNIQUE,
-	"Gender"	TEXT,
-	"Points"	INTEGER,
-	"Graduation"	TEXT,
-	PRIMARY KEY("ID" AUTOINCREMENT)
-);
+
+
